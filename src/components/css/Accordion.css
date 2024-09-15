@@ -1,0 +1,88 @@
+.Wrapper {
+  display: flex;
+  /*   height: 100vh;
+  width: 100vh; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.accordion {
+  width: 700px;
+}
+
+.item {
+  /* background: #f0ebe1; */
+  margin-bottom: 5px;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.title {
+  color: #181818;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.title span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.content {
+  color: #8b7f75;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+/* ..................... */
+/* styles.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 640px) {
+  .accordion {
+    width: 100%;
+  }
+}
